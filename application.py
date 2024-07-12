@@ -15,4 +15,5 @@ def generate():
     return "SUCCESS"
   except:
     return "ERROR"
-app.run(debug=True,port=8081)
+PORT=5000
+app.run(debug=True)
