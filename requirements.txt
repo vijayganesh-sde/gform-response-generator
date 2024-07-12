@@ -1,7 +1,5 @@
 flask
 selenium
-time
-random
 requests
 gunicorn
 random-word
