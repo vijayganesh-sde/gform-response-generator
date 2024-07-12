@@ -70,6 +70,6 @@ def generate_responses(total_responses,form_link):
       total_responses-=1
     except:
       print("cant get")
-    time.sleep(10)
+    time.sleep(2)
 
   
