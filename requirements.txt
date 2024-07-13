@@ -3,4 +3,5 @@ selenium
 requests
 random-word
 Random-Word
+gunicorn
 Werkzeug
