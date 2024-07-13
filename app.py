@@ -8,7 +8,7 @@ from random_word import RandomWords
 def generate_responses(total_responses,form_link):
   options = webdriver.ChromeOptions()
   options.add_argument("--headless")
-  driver= webdriver.Chrome(options=options)
+  driver= webdriver.Chrome()
   
   r=RandomWords()
   while total_responses:
