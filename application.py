@@ -1,7 +1,10 @@
 from flask import Flask, render_template, request
 from app import generate_responses
+import os
+
 app=Flask(__name__)
 form_link = None
+port=int(os.environ.get('PORT',5001))
 @app.route("/",methods=["GET", "POST"])
 def index():
   return render_template('index.html')
@@ -15,5 +18,5 @@ def generate():
     return "SUCCESS"
   except:
     return "ERROR"
-PORT=5000
-app.run(debug=True)
+if __name__=='__main__':
+  app.run(host='0.0.0.0',port=port)

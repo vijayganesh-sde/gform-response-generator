@@ -1,0 +1,8 @@
+applications:
+  -name: response-generator
+  instances: 1
+  memory: 512M
+  buildpack:
+    - python_buildpack
+  env:
+    FLASK_ENV: production
