@@ -3,12 +3,16 @@ import time
 import random
 from selenium.webdriver.common.by import By 
 from random_word import RandomWords
-
+import os
 
 def generate_responses(total_responses,form_link):
   options = webdriver.ChromeOptions()
+  options._binary_location = os.environ.get('GOOGLE_CHROME_BIN')
   options.add_argument("--headless")
-  driver= webdriver.Chrome()
+  options.add_argument("--disable-dev-shm-usage")
+  options.add_argument("--no-sandbox")
+  
+  driver= webdriver.Chrome(options=options,service=os.environ.get('CHROMEDRIVER_PATH'))
   
   r=RandomWords()
   while total_responses:

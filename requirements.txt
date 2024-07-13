@@ -1,7 +1,6 @@
 flask
 selenium
 requests
-gunicorn
 random-word
 Random-Word
 Werkzeug

@@ -13,6 +13,7 @@ def generate():
   if request.method == "POST":
     no_of_resp=int(request.form['resp'])
     form_link=request.form['link']
+  
   try:
     generate_responses(no_of_resp,form_link)
     return "SUCCESS"
